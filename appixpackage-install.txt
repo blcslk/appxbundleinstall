@@ -1,0 +1,151 @@
+
+(app keresése Microsoft Webaruhazbol)
+https://www.microsoft.com/hu-hu/search/explore
+(app letoltese)
+https://store.rg-adguard.net/
+(ismerteto - tutorial)
+https://woshub.com/how-to-download-appx-installation-file-for-any-windows-store-app
+
+(Telepítés előtt ellenőrizendő az appok kiegészítői, így nem biztos, hogy feltétlen minden dolog kell!)
+dir "C:\Program Files\WindowsApps"
+(vagy)
+Get-AppxPackage # vagy -> (Get-AppxPackage).<felsorolás>
+
+(applikáció neve alapján törlés, ha rossz dolog kerülne telepítésre)
+Remove-AppxPackage -Package Microsoft.MSPaint_6.2310.24037.0_x64__8wekyb3d8bbwe
+(applikáció telepítése példa)
+Add-AppxPackage -Path "$((pwd).Path)\Microsoft.WindowsCalculator_2021.2311.0.0_neutral_~_8wekyb3d8bbwe.Msixbundle"
+(vagy egyszerre több app telepítése, a biztosan telepítendő appoknak csinálni kell egy mappát, majd abból indítani, ez egy ajánlott eljárás!)
+Get-Childitem "$((pwd).Path)" -filter *.appx | %{Add-AppxPackage -Path $_.FullName}
+(Ha nem vagyunk biztosak milyen függőségek kötelezőek, az fő app telepítésénél kiolvasható a szükséges függőség a hibaüzenetből, általában az az egy hiány elég is szokott lenni.)
+(Megjegyzés: ha valamelyik kiegészítő függőség szükséges és létezik x86, x64 verzió, alapból fontos lehet mindkettőt feltenni!)
+
+
+==[régebbi verzójú 2021-2019 es megfelelően működő Windows apppok]==
+
+(kötelező függőség a számológéppel együtt)
+Microsoft.WindowsCalculator_2020.1910.0.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+Microsoft.UI.Xaml.2.2_2.21909.17002.0_x64__8wekyb3d8bbwe.appx
+Microsoft.UI.Xaml.2.2_2.21909.17002.0_x64__8wekyb3d8bbwe.BlockMap
+Microsoft.UI.Xaml.2.2_2.21909.17002.0_x86__8wekyb3d8bbwe.appx
+Microsoft.UI.Xaml.2.2_2.21909.17002.0_x86__8wekyb3d8bbwe.BlockMap
+
+(nem biztos, hogy kötelező függőség)
+Microsoft.VCLibs.140.00_14.0.33321.0_x64__8wekyb3d8bbwe.appx
+Microsoft.VCLibs.140.00_14.0.33321.0_x64__8wekyb3d8bbwe.BlockMap
+Microsoft.VCLibs.140.00_14.0.33321.0_x86__8wekyb3d8bbwe.appx
+Microsoft.VCLibs.140.00_14.0.33321.0_x86__8wekyb3d8bbwe.BlockMap
+
+(nem biztos, hogy kötelező függőség)
+Microsoft.VCLibs.140.00.UWPDesktop_14.0.33321.0_x64__8wekyb3d8bbwe.appx
+Microsoft.VCLibs.140.00.UWPDesktop_14.0.33321.0_x64__8wekyb3d8bbwe.BlockMap
+Microsoft.VCLibs.140.00.UWPDesktop_14.0.33321.0_x86__8wekyb3d8bbwe.appx
+Microsoft.VCLibs.140.00.UWPDesktop_14.0.33321.0_x86__8wekyb3d8bbwe.BlockMap
+
+(A NET Framework és Runtime elvileg mindig a legújabb szükséges !!! nem biztos, hogy kötelező függőség, az utolsó 2032-as megfelelhet, alul található)
+
+[Paint 3D régebbi 2021-2019]
+
+(itt már szükséges lehet a fenti "nem biztos, hogy kötelező" telepítése is!)
+
+(megközelítő ajánlott 6.2003.XX verzió)
+Microsoft.MSPaint_2020.305.250.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+
+(majdnem azonos, de kicsit régebbi, aranyközépút verzió)
+Microsoft.MSPaint_2019.718.2251.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+
+
+[Egyéb Microsoft bővítmények, igazából nem feltétlen lehetnek fontosak]
+
+(minden felső az előbbi elérhető verziót takarja, az alatta a legújabbat, későbbi nem volt elérhető)
+
+HEIF-képbővítmények
+Microsoft.HEIFImageExtension_1.0.63001.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+Microsoft.HEIFImageExtension_1.0.63001.70_neutral_~_8wekyb3d8bbwe.EAppxBundle
+
+VP9-videobővítmények
+Microsoft.VP9VideoExtensions_1.1.41.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+Microsoft.VP9VideoExtensions_1.1.41.70_neutral_~_8wekyb3d8bbwe.EAppxBundle
+
+Webes médiabővítmények
+Microsoft.WebMediaExtensions_1.0.62931.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+Microsoft.WebMediaExtensions_1.0.62931.70_neutral_~_8wekyb3d8bbwe.EAppxBundle
+
+Webp-képbővítmények
+Microsoft.WebpImageExtension_1.0.62681.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+(nincs régebbi)
+
+
+[Fényképek régebbi 2021-2019 bevált app]
+
+(kicsit regebbi, de kompatibilis használható ajánlott verzió)
+Microsoft.Windows.Photos_2019.19041.20110.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+
+(kicsit regebbi, de mar megkozelito, használható verzió, de ehhez szükséges a "Microsoft.UI.Xaml.2.1" kiegészítő)
+Microsoft.Windows.Photos_2019.19061.18920.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+Microsoft.UI.Xaml.2.1_2.11906.6001.0_x64__8wekyb3d8bbwe.Appx
+
+(kissé újabb, de előfordulhat az újabb "Microsoft.UI.Xaml" kiegészítő megléte)
+Microsoft.Windows.Photos_2020.20120.4004.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+
+
+
+==[újabb de még használható appok, amit nem szerepelnek itt, arra inkább csak a régebbi ad lehetőséget]==
+
+(kötelező függőség a számológéppel együtt)
+Microsoft.WindowsCalculator_2021.2311.0.0_neutral_~_8wekyb3d8bbwe.Msixbundle
+Microsoft.UI.Xaml.2.8_8.2310.30001.0_x64__8wekyb3d8bbwe.Appx
+Microsoft.UI.Xaml.2.8_8.2310.30001.0_x64__8wekyb3d8bbwe.BlockMap
+Microsoft.UI.Xaml.2.8_8.2310.30001.0_x86__8wekyb3d8bbwe.Appx
+Microsoft.UI.Xaml.2.8_8.2310.30001.0_x86__8wekyb3d8bbwe.BlockMap
+
+(nem biztos, hogy kötelező függőség)
+Microsoft.VCLibs.140.00_14.0.33519.0_x64__8wekyb3d8bbwe.Appx
+Microsoft.VCLibs.140.00_14.0.33519.0_x64__8wekyb3d8bbwe.BlockMap
+Microsoft.VCLibs.140.00_14.0.33519.0_x86__8wekyb3d8bbwe.Appx
+Microsoft.VCLibs.140.00_14.0.33519.0_x86__8wekyb3d8bbwe.BlockMap
+
+(nem biztos, hogy kötelező függőség)
+Microsoft.VCLibs.140.00.UWPDesktop_14.0.33519.0_x64__8wekyb3d8bbwe.Appx
+Microsoft.VCLibs.140.00.UWPDesktop_14.0.33519.0_x64__8wekyb3d8bbwe.BlockMap
+Microsoft.VCLibs.140.00.UWPDesktop_14.0.33519.0_x86__8wekyb3d8bbwe.Appx
+Microsoft.VCLibs.140.00.UWPDesktop_14.0.33519.0_x86__8wekyb3d8bbwe.BlockMap
+
+(A NET Framework és Runtime elvileg mindig a legújabb szükséges !!! elvileg megfelelő a legutolsó 2023-as kiadás!)
+Microsoft.NET.Native.Framework.2.2_2.2.29512.0_x64__8wekyb3d8bbwe.Appx
+Microsoft.NET.Native.Framework.2.2_2.2.29512.0_x64__8wekyb3d8bbwe.BlockMap
+Microsoft.NET.Native.Framework.2.2_2.2.29512.0_x86__8wekyb3d8bbwe.Appx
+Microsoft.NET.Native.Framework.2.2_2.2.29512.0_x86__8wekyb3d8bbwe.BlockMap
+Microsoft.NET.Native.Runtime.2.2_2.2.28604.0_x64__8wekyb3d8bbwe.Appx
+Microsoft.NET.Native.Runtime.2.2_2.2.28604.0_x64__8wekyb3d8bbwe.BlockMap
+Microsoft.NET.Native.Runtime.2.2_2.2.28604.0_x86__8wekyb3d8bbwe.Appx
+Microsoft.NET.Native.Runtime.2.2_2.2.28604.0_x86__8wekyb3d8bbwe.BlockMap
+
+
+[Paint 3D újabb 2022-2023-as app]
+
+(régebbi, de jól működő, ajánlott verzió (2019-nél elvileg régebbi lehet))
+Microsoft.MSPaint_5.1811.20017.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+
+(utolsó 2023-as kiadás, szintén ajánlott!)
+Microsoft.MSPaint_2023.2310.24037.0_neutral_~_8wekyb3d8bbwe.appxbundle
+
+
+[Egyéb Microsoft bővítmények, itt lehet próbálkozni fent a "régebbi"(2023-as) kiadásokkal, vagy beszerezni a legfrissebbet]
+
+
+[Fényképek újabb 2022-2023-as app]
+
+(itt lehet próbálkozni fent a régebbi ajánlott kiadásokkal, hátha azt lehet az újabb kiegészítők mellett is!)
+
+(utolsó 2023-as kiadás)
+Microsoft.Windows.Photos_2023.11090.12017.0_neutral_~_8wekyb3d8bbwe.Msixbundle
+
+
+
+
+
+
+
+
+

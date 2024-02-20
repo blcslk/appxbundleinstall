@@ -1,0 +1,32 @@
+(egy külön tárolóban folytatódnak a fájlok a nagyobb méretük miatt. Össz.: 5GB)
+(az "other-appxbundle" részeként kötelező letölteni, fontosabb fájlokat tartalmaz!)
+
+(download link)
+https://app.skiff.com/docs/d447ce07-36e0-4ef3-9b5c-7bea17387b07#w%2FIe1pL3RTmgpLltDnu21M9VOplJxSDJGaahLOU1UOM%3D
+
+sh-5.2$ md5sum *
+9a4d9526e91462e573cbe3f6426ce81b *Microsoft.MSPaint_2.1703.21017.1000_neutral_~_8wekyb3d8bbwe(1.release-nagyonregi).AppxBundle
+dc530b70885ec298ee5388106c8dab94 *Microsoft.MSPaint_2019.408.1721.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+9ded0f791a275e7b144237e96c646e1b *Microsoft.MSPaint_2019.718.2251.0_neutral_~_8wekyb3d8bbwe(aranykozep).AppxBundle
+a262789f84f537ec53034f142cbecb3b *Microsoft.MSPaint_2020.305.250.0_neutral_~_8wekyb3d8bbwe(OK-6.2003-ajanlott).AppxBundle
+022915d38c269cd36b0c2e29b42f7f74 *Microsoft.MSPaint_2020.420.2001.0_neutral_~_8wekyb3d8bbwe(OK-6.2004).AppxBundle
+4564dcf224cbdcc78a5d0842efca84c3 *Microsoft.MSPaint_2021.2105.4017.0_neutral_~_8wekyb3d8bbwe(OK).AppxBundle
+98462f853361ae55de0050383a0b2cb7 *Microsoft.MSPaint_2022.2203.1037.0_neutral_~_8wekyb3d8bbwe(OK).AppxBundle
+6e630296476a8c93a04ac635d4b76e1c *Microsoft.MSPaint_2023.2310.24037.0_neutral_~_8wekyb3d8bbwe(OK).AppxBundle
+be6fc402e2974c3eb84ba48a95594720 *Microsoft.MSPaint_5.1811.20017.0_neutral_~_8wekyb3d8bbwe(OK).AppxBundle
+6b56c966b6528bcc0251ff9e88a9fd57 *Microsoft.Windows.Photos_2016.1118.10000.2000_neutral_~_8wekyb3d8bbwe.AppxBundle
+abde189ffce4e681177edbb421611d43 *Microsoft.Windows.Photos_2016.1121.10013.2070_neutral_~_8wekyb3d8bbwe.EAppxBundle
+9809c7d1b223052c2f1c48d378e4fb7f *Microsoft.Windows.Photos_2017.18062.14513.2070_neutral_~_8wekyb3d8bbwe.EAppxBundle
+9c112afddbfa7cfecdb630b15dc47934 *Microsoft.Windows.Photos_2017.313.10010.2000_neutral_~_8wekyb3d8bbwe.AppxBundle
+99a5fab66532222644a2e6ddd160bc7c *Microsoft.Windows.Photos_2017.35063.44410.1000_neutral_~_8wekyb3d8bbwe.AppxBundle
+de0bd97b5f1768c390689adc1efebd7f *Microsoft.Windows.Photos_2018.18081.14714.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+90d1ffe06a30c1a3f349eb0b8eabffe5 *Microsoft.Windows.Photos_2019.19041.20110.0_neutral_~_8wekyb3d8bbwe(hasznalhato).AppxBundle
+507be9fdbd28fa5abfab169038dd7168 *Microsoft.Windows.Photos_2019.19061.18920.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+b6366172d6d7f3f0089cd0ea14f52a96 *Microsoft.Windows.Photos_2020.20120.4004.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+2dca94718d692e9c8b9092f65efeac46 *Microsoft.Windows.Photos_2023.10030.27002.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+6ba09901d7abe22d65c2b6c01897b8f5 *Microsoft.Windows.Photos_2023.10070.17002.0_neutral_~_8wekyb3d8bbwe.AppxBundle
+5134e86c3afc74762ce7a90040efc003 *Microsoft.Windows.Photos_2023.11090.12017.0_neutral_~_8wekyb3d8bbwe.Msixbundle
+fa29fbff71dfccaee18735db2a49d356 *Microsoft.WindowsCalculator_2020.2103.8.70_neutral_~_8wekyb3d8bbwe.EAppxBundle
+f02e731bfbf9884de336243bc0057738 *Microsoft.WindowsCalculator_2021.2210.0.0_neutral_~_8wekyb3d8bbwe.Msixbundle
+47c94d161453399c2b0c8f424049dfd3 *Microsoft.WindowsCalculator_2021.2307.4.0_neutral_~_8wekyb3d8bbwe.Msixbundle
+
