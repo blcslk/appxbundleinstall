@@ -3,6 +3,7 @@
 
 (download link)
 https://app.skiff.com/docs/d447ce07-36e0-4ef3-9b5c-7bea17387b07#w%2FIe1pL3RTmgpLltDnu21M9VOplJxSDJGaahLOU1UOM%3D
+https://www.mediafire.com/folder/aghbgtcrq0z48/other-appxbundle-largefiles
 
 sh-5.2$ md5sum *
 9a4d9526e91462e573cbe3f6426ce81b *Microsoft.MSPaint_2.1703.21017.1000_neutral_~_8wekyb3d8bbwe(1.release-nagyonregi).AppxBundle
